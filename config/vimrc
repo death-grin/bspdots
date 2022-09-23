@@ -1,0 +1,25 @@
+set number
+set relativenumber
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set autoindent
+
+set visualbell
+set t_vb=
+
+filetype on
+syntax on
+
+set clipboard=unnamedplus
+
+"" Set Caps Lock as ESC
+au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+"" Shortcurt
+let mapleader = " "
+
+nmap <Leader>q :q<CR>
+nmap <Leader>Q :q!<CR>
+nmap <Leader>w :wq<CR>
+nmap <Leader>h :nohlsearch<CR>
